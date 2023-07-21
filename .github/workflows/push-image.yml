@@ -36,4 +36,4 @@ jobs:
           context: ./containers/simple-nginx-proxy
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ${{ env.CONTAINER_REGISTRY }}/simple-nginx-proxy:${{ env.IMAGE_VERSION }}
+          tags: ${{ env.CONTAINER_REGISTRY }}/gihyodocker/simple-nginx-proxy:${{ env.IMAGE_VERSION }}
