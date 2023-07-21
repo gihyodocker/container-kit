@@ -37,3 +37,10 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: ${{ env.CONTAINER_REGISTRY }}/gihyodocker/simple-nginx-proxy:${{ env.IMAGE_VERSION }}
+      - name: Build and push debug 
+        uses: docker/build-push-action@v4
+        with:
+          context: ./containers/debug
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: ${{ env.CONTAINER_REGISTRY }}/gihyodocker/debug:${{ env.IMAGE_VERSION }}
