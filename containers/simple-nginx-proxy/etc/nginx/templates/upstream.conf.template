@@ -1,0 +1,3 @@
+upstream backend {
+    server ${BACKEND_HOST} max_fails=${BACKEND_MAX_FAILS} fail_timeout=${BACKEND_FAIL_TIMEOUT};
+}
