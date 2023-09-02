@@ -44,3 +44,10 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: ${{ env.CONTAINER_REGISTRY }}/gihyodocker/debug:${{ env.IMAGE_VERSION }}
+      - name: Build and push time-limit-job 
+        uses: docker/build-push-action@v4
+        with:
+          context: ./containers/time-limit-job
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: ${{ env.CONTAINER_REGISTRY }}/gihyodocker/time-limit-job:${{ env.IMAGE_VERSION }}
